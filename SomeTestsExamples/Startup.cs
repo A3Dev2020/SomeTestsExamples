@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RepoLibrary;
+using SomeTestsExamples.Entities;
+using SomeTestsExamples.Logic;
 
 namespace SomeTestsExamples
 {
@@ -24,6 +27,11 @@ namespace SomeTestsExamples
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddScoped<IRepository<Post>, APIRepository<Post>>(provider =>
+            {
+                return (new APIRepository<Post>("https://jsonplaceholder.typicode.com/posts"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

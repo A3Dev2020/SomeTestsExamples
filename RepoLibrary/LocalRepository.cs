@@ -1,4 +1,4 @@
-﻿namespace SomeTestsExamples.Logic
+﻿namespace RepoLibrary
 {
     public class LocalRepository<T> : AJsonRepository<T>
     {

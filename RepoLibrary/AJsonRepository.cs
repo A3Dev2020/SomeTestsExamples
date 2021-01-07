@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
+using SomeTestsExamples.Logic;
 
-namespace SomeTestsExamples.Logic
+namespace RepoLibrary
 {
     public abstract class AJsonRepository<T> : IRepository<T>
     {
@@ -16,7 +15,7 @@ namespace SomeTestsExamples.Logic
             Collection = JsonConvert.DeserializeObject<List<T>>(json);
         }
 
-        public IEnumerable<T> Get()
+        public virtual IEnumerable<T> Get()
         {
             return (Collection);
         }

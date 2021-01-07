@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeTestsExamples", "SomeTestsExamples.csproj", "{CF7418CF-83CD-477A-BCA9-57BADCE218DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsMyRepos", "..\TestsMyRepos\TestsMyRepos.csproj", "{23C2A917-FB84-4FBD-A493-126A02AC4B85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoLibrary", "..\RepoLibrary\RepoLibrary.csproj", "{D0D89A2C-9A82-4A1F-B8F7-6D8165BF495A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{CF7418CF-83CD-477A-BCA9-57BADCE218DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF7418CF-83CD-477A-BCA9-57BADCE218DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF7418CF-83CD-477A-BCA9-57BADCE218DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23C2A917-FB84-4FBD-A493-126A02AC4B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23C2A917-FB84-4FBD-A493-126A02AC4B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23C2A917-FB84-4FBD-A493-126A02AC4B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23C2A917-FB84-4FBD-A493-126A02AC4B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D89A2C-9A82-4A1F-B8F7-6D8165BF495A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D89A2C-9A82-4A1F-B8F7-6D8165BF495A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D89A2C-9A82-4A1F-B8F7-6D8165BF495A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D89A2C-9A82-4A1F-B8F7-6D8165BF495A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
