@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SomeTestsExamples.Entities;
+using SomeTestsExamples.Logic;
 
 namespace SomeTestsExamples
 {
@@ -15,12 +17,18 @@ namespace SomeTestsExamples
     {
         public IActionResult Index()
         {
-            HttpClient client = new HttpClient();
-            string json = client.GetStringAsync("https://jsonplaceholder.typicode.com/posts").Result;
+            //APIRepository<Post> repo = 
+            //LocalRepository<Post> repo = new LocalRepository<Post>("posts.json");
 
-            List<Post> posts = JsonConvert.DeserializeObject<List<Post>>(json);
+            AJsonRepository<Post> repo = new APIRepository<Post>("https://jsonplaceholder.typicode.com/posts");
+            AJsonRepository<Post> repo2 = new LocalRepository<Post>("posts.json");
 
-            return (Json(posts));
+            IEnumerable<Post> posts = repo.Where(i => i.Body.Contains("volupta"));
+
+            JsonSerializerOptions serializerSettings = new JsonSerializerOptions();
+
+            serializerSettings.WriteIndented = true;
+            return Json(posts, serializerSettings);
         }
     }
 }
